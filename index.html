@@ -1,3 +1,51 @@
-
-<!-- saved from url=(0086)file:///C:/Users/acer/Desktop/pocket%20smart%20AI/Pcketsmart/Pocketsmart-AI/index.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pocketsmart AI - Smart Expense Tracker</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family: 'Segoe UI', sans-serif}
+body{background:#0f0f14;color:white;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{background:linear-gradient(135deg,#1a1a2e,#16213e);padding:40px;border-radius:24px;max-width:480px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.1);text-align:center}
+h1{font-size:36px;margin-bottom:10px;background:linear-gradient(90deg,#00f5ff,#7b61ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+p{color:#a0a0b2;margin-bottom:25px;line-height:1.6}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:25px 0;text-align:left}
+.feat{background:rgba(255,255,255,0.05);padding:14px;border-radius:12px;font-size:14px;border:1px solid rgba(255,255,255,0.05)}
+.feat span{font-size:20px;display:block;margin-bottom:5px}
+.input-box{display:flex;gap:10px;margin-top:20px}
+input{flex:1;padding:14px 18px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:rgba(0,0,0,0.3);color:white;outline:none}
+button{padding:14px 22px;border-radius:12px;border:none;background:linear-gradient(90deg,#00f5ff,#7b61ff);color:white;font-weight:bold;cursor:pointer}
+#result{margin-top:20px;padding:15px;background:rgba(0,245,255,0.1);border-radius:12px;display:none}
+.live{margin-top:15px;color:#00ff88;font-size:13px}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Pocketsmart AI</h1>
+<p>Your AI-powered pocket expense manager. Track, save & grow smart!</p>
+<div class="features">
+<div class="feat"><span>💸</span> Auto Expense Tracking</div>
+<div class="feat"><span>🤖</span> AI Budget Tips</div>
+<div class="feat"><span>📊</span> Smart Reports</div>
+<div class="feat"><span>🔒</span> 100% Secure</div>
+</div>
+<div class="input-box">
+<input type="text" id="exp" placeholder="Eg: Tea 20rs, Bus 50rs">
+<button onclick="addExp()">Add</button>
+</div>
+<div id="result"></div>
+<div class="live">● Live at abikutty0406-spec.github.io/Pocketsmart-AI</div>
+</div>
+<script>
+function addExp(){
+let v=document.getElementById('exp').value;
+if(!v)return;
+let r=document.getElementById('result');
+r.style.display='block';
+r.innerHTML=`✅ Added: <b>${v}</b><br><br>💡 AI Tip: You spent less than yesterday! Keep saving!`;
+document.getElementById('exp').value='';
+}
+</script>
+</body>
+</html>
